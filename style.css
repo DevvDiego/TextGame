@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: monospace;
+    
+}
+
+html{
+    font-size: 18px;
+}
+
+:root{
+    --gamebg: #111111;
+    --text: #a448a4;
+}
+
+span,p,h1,h2,h3,h4,h5,h6{
+    color: var(--text);
+
+}
+
+#game{
+    width: 100%;
+    height: 100dvh;
+    background-color: var(--gamebg);
+
+
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#screen{
+    width: 100%;
+    height: 40dvh;
+
+    background-color: #131313;
+    border: 2px solid #101010;
+    
+}
+
+#console{
+    width: 100%;
+    height: 60dvh;
+
+}
+
+#console_text{
+    /* width: 100%;*/
+    height: 100%; 
+    padding: 10px;
+
+    font-size: 1.05rem;
+
+}
