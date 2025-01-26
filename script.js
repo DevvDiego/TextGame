@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     const startbtn = document.getElementById("startbtn");
     
-    startbtn.addEventListener("click", ()=>{
-        const music_players = loading_screen();
+    startbtn.addEventListener("click", async ()=>{
+        const music_players = await loading_screen();
         
-
+        music_players.menu.play();
 
     })
 
