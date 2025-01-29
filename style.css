@@ -12,7 +12,9 @@ html{
 
 :root{
     --gamebg: #111111;
-    --text: #a448a4;
+    --primary: #801c80;
+    --player_textcolor: #cea2ce;
+    --game_textcolor: #801c80;
 }
 
 span,p,h1,h2,h3,h4,h5,h6{
