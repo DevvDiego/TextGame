@@ -1,4 +1,4 @@
-import { loading_screen } from "./utils/loadingscreen.js";
+import { loading_screen } from "./utils/scripts/loadingscreen";
 
 document.addEventListener("DOMContentLoaded", ()=>{
 
