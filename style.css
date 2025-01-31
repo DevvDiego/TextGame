@@ -41,22 +41,6 @@
 }
 
 
-#console{
-    width: 100%;
-    height: 60dvh;
-    /* margin: auto; */
-}
-
-#console_text{
-    /* width: 100%;*/
-    height: 100%;
-    padding: 30px;
-
-    font-size: 1.05rem;
-
-}
-
-
 
 /* Styles for phones and smaller screens */
 @media (max-width: 767px) {
