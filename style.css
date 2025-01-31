@@ -1,14 +1,7 @@
-*{
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
-    font-family: monospace;
-    
-}
-
-html{
-    font-size: 18px;
-}
+@import url("utils/styles/basestyles.css");
+@import url("utils/styles/spinner.css");
+@import url("utils/styles/loading.css");
+@import url("utils/styles/animations.css");
 
 :root{
     --gamebg: #111111;
@@ -17,19 +10,13 @@ html{
     --game_textcolor: #801c80;
 }
 
-span,p,h1,h2,h3,h4,h5,h6{
-    color: var(--text);
-
-}
-
-
-
 
 
 #game{
     width: 100%;
     height: 100dvh;
     background-color: var(--gamebg);
+    color: var(--player_textcolor);
 
 }
 
