@@ -38,11 +38,10 @@ span,p,h1,h2,h3,h4,h5,h6{
     height: 40dvh;
 
 
-    background-color: #131313;
-    border: 2px solid #101010;
-
     display: flex;
     justify-content: center;
+    align-items: center;
+
 }
 
 #screen img{
@@ -52,6 +51,7 @@ span,p,h1,h2,h3,h4,h5,h6{
 
     border-radius: 10px;
 }
+
 
 #console{
     width: 100%;
@@ -68,3 +68,50 @@ span,p,h1,h2,h3,h4,h5,h6{
 
 }
 
+
+
+/* Styles for phones and smaller screens */
+@media (max-width: 767px) {
+
+html{
+    font-size: 18px;
+}
+
+#game{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+
+}
+
+
+/* Styles for tablets and larger screens */
+@media (min-width: 768px) {
+
+html{
+    font-size: 24px;
+}
+
+#game{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+}
+
+#screen{
+    height: 100dvh;
+}
+
+#screem img{
+    max-width: 80%;
+    max-height: 80%;
+}
+
+#console{
+    height: 100dvh;
+}
+
+
+}
