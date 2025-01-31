@@ -3,8 +3,8 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-    font-family: monospace;
-    
+    font-family: Consolas,'Courier New', Courier, monospace;
+    letter-spacing: 1px;
 }
 
 html{
