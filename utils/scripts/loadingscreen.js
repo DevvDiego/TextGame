@@ -1,3 +1,4 @@
+import { Console } from "./console.js"
 import {load_music} from "./loadmusic.js"
 
 
@@ -18,8 +19,12 @@ export async function loading_screen() {
 
     startbtn.classList.add("hidden");
     spinner.classList.remove("hidden");
+
+
     const music_players = await load_music();
-    
+    const console = new Console();
+
+
     spinner.classList.add("hidden")
     loading_screen.classList.add("fadeout")
     game.classList.add("fadein")
