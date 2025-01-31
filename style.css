@@ -2,6 +2,7 @@
 @import url("utils/styles/spinner.css");
 @import url("utils/styles/loading.css");
 @import url("utils/styles/animations.css");
+@import url("utils/styles/console.css");
 
 :root{
     --gamebg: #111111;
