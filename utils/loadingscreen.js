@@ -19,17 +19,6 @@ export async function loading_screen() {
     startbtn.classList.add("hidden");
     spinner.classList.remove("hidden");
     const music_players = await load_music();
-
-
-    //!temporary solution????
-    //after three seconds start the app hoping everything is already loaded
-    // setInterval(()=>{
-
-    //     spinner.classList.add("hidden")
-    //     loading_screen.classList.add("fadeout")
-    //     game.classList.add("fadein")
-
-    // }, 1*1000);
     
     spinner.classList.add("hidden")
     loading_screen.classList.add("fadeout")

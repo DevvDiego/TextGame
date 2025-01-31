@@ -3,7 +3,7 @@ export class AudioPlayer {
         this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
         this.audioBuffer = null;
         this.source = null;
-        this.isLoaded = false; // Track if the audio is loaded
+        this.isLoaded = false;
     }
   
     async load(url) {
@@ -11,12 +11,12 @@ export class AudioPlayer {
             const response = await fetch(url);
             const arrayBuffer = await response.arrayBuffer();
             this.audioBuffer = await this.audioContext.decodeAudioData(arrayBuffer);
-            this.isLoaded = true; // Mark audio as loaded
+            this.isLoaded = true;
             console.log('Audio cargado correctamente.');
         
         }catch(error) {
             console.error('Error al cargar el audio:', error);
-            this.isLoaded = false; // Mark audio as not loaded
+            this.isLoaded = false;
       
         }
     }
@@ -36,7 +36,7 @@ export class AudioPlayer {
 
       this.source = this.audioContext.createBufferSource();
       this.source.buffer = this.audioBuffer;
-      this.source.loop = true; // Activar el loop
+      this.source.loop = true;
       this.source.connect(this.audioContext.destination);
       this.source.start();
       console.log('Audio en reproducción (loop).');
