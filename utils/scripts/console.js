@@ -1,25 +1,26 @@
+import { HistoryHandler } from "./historyhandler.js";
+
 export class Console{
-    constructor(){
+    constructor(history){
         const system = document.getElementById("console_text");
         const input = document.getElementById("console_input");
-
-        input.addEventListener("keypress", (ev)=>{
-            if(ev.key == "Enter"){
-                console.log("Nuevo texto entrante")
-                let text_in = input.value.toLowerCase();
-                
-
-                if(text_in == "hola"){
-                    
-                    system.innerText = "Hola, el juego apenas habla jaaaaaaaaaaaaa";
-                    console.log("texto de consola reemplazado");
-                }
-
-            }
-        });
+        this.history_handler = HistoryHandler(history);
+       
+        input.addEventListener("keypress", this.process_input);
 
     }
 
+    /**
+     * 
+     * @param {KeyboardEvent} ev 
+     */
+    process_input(ev){
+        if(ev.key == "Enter"){
+            console.log("Nuevo texto entrante")
+            let text_in = input.value.toLowerCase();
+            
 
+        }
+    }
 
 }
