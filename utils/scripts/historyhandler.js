@@ -30,8 +30,9 @@ export class HistoryHandler {
         return this.room["descripcion"];
     }
 
-    whato_options() {
-        return this.room["opciones"];
+    what_options() {
+        //!map this func
+        return this.room["opciones"][1]["texto"];
     }
 
 }
