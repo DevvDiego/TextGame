@@ -35,8 +35,6 @@ export class Console{
         if(this.isFactoryCreated == false){
             console.error("Console class instance must be made by create method");
         }
-        console.log(this.isFactoryCreated)
-        console.log(this.history_handler)
 
         this.setConsoleText(this.history_handler.what_desc());
 
@@ -66,8 +64,13 @@ export class Console{
         });
     }
 
+    // ? Scroll top to bottom or bottom to top?
     setConsoleText(text){
-        this.system.innerText = "\n" + this.getConsoleText();
+        //? bottom to top?
+        this.system.innerText = text + "\n\n" + this.getConsoleText();
+        
+        //TODO Top to bottom
+        // this.system.innerText = "\n" + this.getConsoleText();
     }
 
     getConsoleText(){
