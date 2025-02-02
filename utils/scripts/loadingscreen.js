@@ -21,6 +21,8 @@ export async function loading_screen() {
     spinner.classList.remove("hidden");
 
     // ? maybe add loading function? to load everything and have a single await
+
+    //TODO add specific loading bar locations depending on what await is done
     // const music_players = await load_music();
     const console = Console.create("assets/games/dungeon.json");
 
