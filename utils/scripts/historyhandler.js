@@ -35,7 +35,7 @@ export class HistoryHandler {
     }
 
     #parse_options() {
-        this.room.opciones;
+        let opciones = this.room.opciones
         let opcionesString = "Opciones:\n";
     
         // Recorrer las opciones y agregarlas al string
