@@ -21,8 +21,8 @@ export async function loading_screen() {
     spinner.classList.remove("hidden");
 
     // ? maybe add loading function? to load everything and have a single await
-    const music_players = await load_music();
-    const console = new Console("assets/games/dungeon.json");
+    // const music_players = await load_music();
+    const console = Console.create("assets/games/dungeon.json");
 
 
     spinner.classList.add("hidden")
