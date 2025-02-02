@@ -31,8 +31,22 @@ export class HistoryHandler {
     }
 
     what_options() {
-        //!map this func
-        return this.room["opciones"][1]["texto"];
+        return this.#parse_options();
+    }
+
+    #parse_options() {
+        this.room.opciones;
+        let opcionesString = "Opciones:\n";
+    
+        // Recorrer las opciones y agregarlas al string
+        for (const key in opciones) {
+            if (opciones.hasOwnProperty(key)) {
+                const opcion = opciones[key];
+                opcionesString += `${key}: ${opcion.texto}\n`;
+            }
+        }
+    
+        return opcionesString;
     }
 
 }
