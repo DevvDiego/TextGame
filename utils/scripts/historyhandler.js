@@ -23,7 +23,8 @@ export class HistoryHandler {
     }
 
     what_room() {
-        return this.room;
+        // return this.room;
+        return "Habitacion 1";
     }
 
     what_desc() {
