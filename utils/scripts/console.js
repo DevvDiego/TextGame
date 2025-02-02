@@ -44,14 +44,17 @@ export class Console{
 
 
                 switch(this.getConsoleInput()){
-
+                    //using fall through for switch-case
+                    case "habitaciones":
+                    case "cuartos":
                     case "habitacion":
                         this.setConsoleText(
                             this.history_handler.what_room()
                         );
                     break;
-
-                    case "opcion" || "opciones":
+                    
+                    case "opcion":
+                    case "opciones":
                         this.setConsoleText(
                             this.history_handler.what_options()
                         );
