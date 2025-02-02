@@ -4,13 +4,16 @@ export class Console{
     constructor(history){
         this.system = document.getElementById("console_text");
         this.input = document.getElementById("console_input");
-        this.history_handler = history; //expecting an already fetched history json
 
-        //factory verifiyng var
-        this.isFactoryCreated = false;
-
+        this.history_handler = history; //expecting an HistoryHandler instance
+        
+        this.isFactoryCreated = Console.factoryEnabled;
+        
         this.begin();
     }
+
+    //factory verifiyng var
+    static factoryEnabled = false;
 
     /**
      * Factory method. Use this to create an instance
@@ -18,16 +21,22 @@ export class Console{
      * @param {String} history 
      */
     static async create(history){
-        this.isFactoryCreated = true;
         this.history_handler = await HistoryHandler.create(history);
-        return new Console(history);
+        
+        Console.factoryEnabled = true;
+        const consoleInstance = new Console(this.history_handler);
+        Console.factoryEnabled = false;
+        
+        return consoleInstance;
     }
 
     //here starts all the execution, after being factory created
     begin(){
-        if(!this.isFactoryCreated){
+        if(this.isFactoryCreated == false){
             console.error("Console class instance must be made by create method");
         }
+        console.log(this.isFactoryCreated)
+        console.log(this.history_handler)
 
         this.setConsoleText(this.history_handler.what_desc());
 
