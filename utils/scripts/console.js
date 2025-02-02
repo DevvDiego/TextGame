@@ -51,7 +51,7 @@ export class Console{
                         );
                     break;
 
-                    case "opcion":
+                    case "opcion" || "opciones":
                         this.setConsoleText(
                             this.history_handler.what_options()
                         );
