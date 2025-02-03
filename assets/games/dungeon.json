@@ -1,170 +1,183 @@
 {
     "habitacion_1": {
-    "descripcion": "Estás en una habitación oscura. Hay una puerta al norte y una ventana al este.",
-    "opciones": {
-        "1": {
-        "texto": "Abrir la puerta",
-        "siguiente_habitacion": "habitacion_2"
-        },
-        "2": {
-        "texto": "Mirar por la ventana",
-        "siguiente_habitacion": "habitacion_3"
-        },
-        "3": {
-        "texto": "Quedarse quieto",
-        "siguiente_habitacion": "habitacion_1"
-        }
-    }
+        "nombre_habitacion": "Habitación Oscura",
+        "descripcion": "Estás en una habitación oscura. Hay una puerta al norte y una ventana al este.",
+        "opciones": [
+            {
+                "texto": "Abrir la puerta",
+                "siguiente_habitacion": "habitacion_2"
+            },
+            {
+                "texto": "Mirar por la ventana",
+                "siguiente_habitacion": "habitacion_3"
+            },
+            {
+                "texto": "Quedarse quieto",
+                "siguiente_habitacion": "habitacion_1"
+            }
+        ]
     },
     "habitacion_2": {
-    "descripcion": "Has entrado en un pasillo largo. Hay una escalera que sube y otra que baja.",
-    "opciones": {
-        "1": {
-        "texto": "Subir la escalera",
-        "siguiente_habitacion": "habitacion_4"
-        },
-        "2": {
-        "texto": "Bajar la escalera",
-        "siguiente_habitacion": "habitacion_5"
-        },
-        "3": {
-        "texto": "Volver a la habitación anterior",
-        "siguiente_habitacion": "habitacion_1"
-        }
-    }
+        "nombre_habitacion": "Pasillo Largo",
+        "descripcion": "Has entrado en un pasillo largo. Hay una escalera que sube y otra que baja.",
+        "opciones": [
+            {
+                "texto": "Subir la escalera",
+                "siguiente_habitacion": "habitacion_4"
+            },
+            {
+                "texto": "Bajar la escalera",
+                "siguiente_habitacion": "habitacion_5"
+            },
+            {
+                "texto": "Volver a la habitación anterior",
+                "siguiente_habitacion": "habitacion_1"
+            }
+        ]
     },
     "habitacion_3": {
-    "descripcion": "Miraste por la ventana y ves un jardín. Hay una puerta que parece estar abierta.",
-    "opciones": {
-        "1": {
-        "texto": "Saltar por la ventana",
-        "siguiente_habitacion": "habitacion_6"
-        },
-        "2": {
-        "texto": "Cerrar la ventana y volver",
-        "siguiente_habitacion": "habitacion_1"
-        }
-    }
+        "nombre_habitacion": "Jardín",
+        "descripcion": "Miraste por la ventana y ves un jardín. Hay una puerta que parece estar abierta.",
+        "opciones": [
+            {
+                "texto": "Saltar por la ventana",
+                "siguiente_habitacion": "habitacion_6"
+            },
+            {
+                "texto": "Cerrar la ventana y volver",
+                "siguiente_habitacion": "habitacion_1"
+            }
+        ]
     },
     "habitacion_4": {
-    "descripcion": "Has subido a un ático polvoriento. Hay un cofre en el centro.",
-    "opciones": {
-        "1": {
-        "texto": "Abrir el cofre",
-        "siguiente_habitacion": "habitacion_7"
-        },
-        "2": {
-        "texto": "Volver a bajar",
-        "siguiente_habitacion": "habitacion_2"
-        }
-    }
+        "nombre_habitacion": "Ático Polvoriento",
+        "descripcion": "Has subido a un ático polvoriento. Hay un cofre en el centro.",
+        "opciones": [
+            {
+                "texto": "Abrir el cofre",
+                "siguiente_habitacion": "habitacion_7"
+            },
+            {
+                "texto": "Volver a bajar",
+                "siguiente_habitacion": "habitacion_2"
+            }
+        ]
     },
     "habitacion_5": {
-    "descripcion": "Has bajado a un sótano húmedo. Hay una puerta al fondo.",
-    "opciones": {
-        "1": {
-        "texto": "Abrir la puerta",
-        "siguiente_habitacion": "habitacion_8"
-        },
-        "2": {
-        "texto": "Volver a subir",
-        "siguiente_habitacion": "habitacion_2"
-        }
-    }
+        "nombre_habitacion": "Sótano Húmedo",
+        "descripcion": "Has bajado a un sótano húmedo. Hay una puerta al fondo.",
+        "opciones": [
+            {
+                "texto": "Abrir la puerta",
+                "siguiente_habitacion": "habitacion_8"
+            },
+            {
+                "texto": "Volver a subir",
+                "siguiente_habitacion": "habitacion_2"
+            }
+        ]
     },
     "habitacion_6": {
-    "descripcion": "Has saltado por la ventana y estás en el jardín. Hay un camino que lleva al bosque.",
-    "opciones": {
-        "1": {
-        "texto": "Seguir el camino",
-        "siguiente_habitacion": "habitacion_9"
-        },
-        "2": {
-        "texto": "Volver a la ventana",
-        "siguiente_habitacion": "habitacion_3"
-        }
-    }
+        "nombre_habitacion": "Claro del Jardín",
+        "descripcion": "Has saltado por la ventana y estás en el jardín. Hay un camino que lleva al bosque.",
+        "opciones": [
+            {
+                "texto": "Seguir el camino",
+                "siguiente_habitacion": "habitacion_9"
+            },
+            {
+                "texto": "Volver a la ventana",
+                "siguiente_habitacion": "habitacion_3"
+            }
+        ]
     },
     "habitacion_7": {
-    "descripcion": "Has abierto el cofre y encuentras un mapa. Parece ser un mapa del tesoro.",
-    "opciones": {
-        "1": {
-        "texto": "Tomar el mapa",
-        "siguiente_habitacion": "habitacion_10"
-        },
-        "2": {
-        "texto": "Dejar el mapa y cerrar el cofre",
-        "siguiente_habitacion": "habitacion_4"
-        }
-    }
+        "nombre_habitacion": "Ático con Cofre",
+        "descripcion": "Has abierto el cofre y encuentras un mapa. Parece ser un mapa del tesoro.",
+        "opciones": [
+            {
+                "texto": "Tomar el mapa",
+                "siguiente_habitacion": "habitacion_10"
+            },
+            {
+                "texto": "Dejar el mapa y cerrar el cofre",
+                "siguiente_habitacion": "habitacion_4"
+            }
+        ]
     },
     "habitacion_8": {
-    "descripcion": "Has abierto la puerta y encuentras una habitación llena de tesoros.",
-    "opciones": {
-        "1": {
-        "texto": "Tomar un tesoro",
-        "siguiente_habitacion": "habitacion_11"
-        },
-        "2": {
-        "texto": "Cerrar la puerta y volver",
-        "siguiente_habitacion": "habitacion_5"
-        }
-    }
+        "nombre_habitacion": "Habitación con Tesoro",
+        "descripcion": "Has abierto la puerta y encuentras una habitación llena de tesoros.",
+        "opciones": [
+            {
+                "texto": "Tomar un tesoro",
+                "siguiente_habitacion": "habitacion_11"
+            },
+            {
+                "texto": "Cerrar la puerta y volver",
+                "siguiente_habitacion": "habitacion_5"
+            }
+        ]
     },
     "habitacion_9": {
-    "descripcion": "Has seguido el camino y llegas a un claro en el bosque. Hay una cabaña.",
-    "opciones": {
-        "1": {
-        "texto": "Entrar en la cabaña",
-        "siguiente_habitacion": "habitacion_12"
-        },
-        "2": {
-        "texto": "Volver al jardín",
-        "siguiente_habitacion": "habitacion_6"
-        }
-    }
+        "nombre_habitacion": "Claro en el Bosque",
+        "descripcion": "Has seguido el camino y llegas a un claro en el bosque. Hay una cabaña.",
+        "opciones": [
+            {
+                "texto": "Entrar en la cabaña",
+                "siguiente_habitacion": "habitacion_12"
+            },
+            {
+                "texto": "Volver al jardín",
+                "siguiente_habitacion": "habitacion_6"
+            }
+        ]
     },
     "habitacion_10": {
-    "descripcion": "Has tomado el mapa. Parece que el tesoro está en el sótano.",
-    "opciones": {
-        "1": {
-        "texto": "Ir al sótano",
-        "siguiente_habitacion": "habitacion_5"
-        },
-        "2": {
-        "texto": "Quedarse en el ático",
-        "siguiente_habitacion": "habitacion_4"
-        }
-    }
+        "nombre_habitacion": "Mapa del Tesoro",
+        "descripcion": "Has tomado el mapa. Parece que el tesoro está en el sótano.",
+        "opciones": [
+            {
+                "texto": "Ir al sótano",
+                "siguiente_habitacion": "habitacion_5"
+            },
+            {
+                "texto": "Quedarse en el ático",
+                "siguiente_habitacion": "habitacion_4"
+            }
+        ]
     },
     "habitacion_11": {
-    "descripcion": "Has tomado un tesoro. ¡Felicidades, has ganado!",
-    "opciones": {}
+        "nombre_habitacion": "Victoria",
+        "descripcion": "Has tomado un tesoro. ¡Felicidades, has ganado!",
+        "opciones": []
     },
     "habitacion_12": {
-    "descripcion": "Has entrado en la cabaña. Hay un anciano sentado junto al fuego.",
-    "opciones": {
-        "1": {
-        "texto": "Hablar con el anciano",
-        "siguiente_habitacion": "habitacion_13"
-        },
-        "2": {
-        "texto": "Salir de la cabaña",
-        "siguiente_habitacion": "habitacion_9"
-        }
-    }
+        "nombre_habitacion": "Cabaña del Anciano",
+        "descripcion": "Has entrado en la cabaña. Hay un anciano sentado junto al fuego.",
+        "opciones": [
+            {
+                "texto": "Hablar con el anciano",
+                "siguiente_habitacion": "habitacion_13"
+            },
+            {
+                "texto": "Salir de la cabaña",
+                "siguiente_habitacion": "habitacion_9"
+            }
+        ]
     },
     "habitacion_13": {
-    "descripcion": "El anciano te cuenta una historia sobre un tesoro escondido en el sótano.",
-    "opciones": {
-        "1": {
-        "texto": "Ir al sótano",
-        "siguiente_habitacion": "habitacion_5"
-        },
-        "2": {
-        "texto": "Quedarse en la cabaña",
-        "siguiente_habitacion": "habitacion_12"
-        }
-    }
+        "nombre_habitacion": "Historia del Anciano",
+        "descripcion": "El anciano te cuenta una historia sobre un tesoro escondido en el sótano.",
+        "opciones": [
+            {
+                "texto": "Ir al sótano",
+                "siguiente_habitacion": "habitacion_5"
+            },
+            {
+                "texto": "Quedarse en la cabaña",
+                "siguiente_habitacion": "habitacion_12"
+            }
+        ]
     }
 }
