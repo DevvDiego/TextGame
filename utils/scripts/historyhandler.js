@@ -1,28 +1,11 @@
 export class HistoryHandler {
     constructor(history) {
-        // this.history = history;
-        this.history = {
-            "habitacion_1": {
-                "nombre_habitacion": "Habitación Oscura",
-                "descripcion": "Estás en una habitación oscura. Hay una puerta al norte y una ventana al este.",
-                "opciones": [
-                    {
-                        "texto": "Abrir la puerta",
-                        "siguiente_habitacion": "habitacion_2"
-                    },
-                    {
-                        "texto": "Mirar por la ventana",
-                        "siguiente_habitacion": "habitacion_3"
-                    },
-                    {
-                        "texto": "Quedarse quieto",
-                        "siguiente_habitacion": "habitacion_1"
-                    }
-                ]
-            },
-        };
+        this.history = history;
 
         this.currentRoom = this.history.habitacion_1; // initial room
+        this.name = this.currentRoom.nombre_habitacion;
+        this.desc = this.currentRoom.descripcion;
+        this.options = this.currentRoom.opciones;
     }
 
     // Factory method to handle asynchronously
@@ -43,22 +26,75 @@ export class HistoryHandler {
         }
     }
 
-    roomName() {
-        return this.currentRoom.nombre_habitacion;
+    getRoomName() {
+        return this.name;
     }
 
-    roomDesc() {
-        return this.currentRoom.descripcion;
+    getRoomDesc() {
+        return this.desc;
     }
 
-    roomOptions() {        
+    getRoomOptions() {        
         let opcionesString = "Opciones:\n";
 
-        this.currentRoom.opciones.forEach((opcion, index) => {
+        this.options.forEach((opcion, index)=>{
             opcionesString += `${index + 1}: ${opcion.texto}\n` 
         });
 
         return opcionesString;
+    }
+
+    changeRoom(newRoom){
+        if (typeof newRoom !== 'string' || newRoom.trim() === '') {
+            console.error('La nueva habitación debe ser una cadena no vacía.');
+            return false;
+        }
+
+        if( !(newRoom in this.history) ){
+            return false;
+        }
+
+
+        this.currentRoom = this.history[newRoom];
+        this.name = this.currentRoom.nombre_habitacion;
+        this.desc = this.currentRoom.descripcion;
+        this.options = this.currentRoom.opciones;
+        
+        return true;
+    }
+
+    /**
+     * 
+     * 
+     * @param {String} inputOption
+     * @returns {Number} index of the found element or -1 to not found 
+     */
+    isAnOption(inputOption){
+        //only checks an index
+        let optionIndex = inputOption;
+        return optionIndex >= 0 && optionIndex < this.options.length;
+
+        //checks the string input 
+        // this.options.forEach((option,index)=>{
+        //     if(inputOption == this.clean(option.texto)){
+        //         console.log("opcion correcta encontrada");
+        //         return true;
+        //     }
+        // });
+
+        // return false;
+    }
+
+    /**
+     * 
+     * @param {String} text 
+     */
+    clean(text){
+        return text
+            .toLowerCase()
+            .trim()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "");
     }
 
 }

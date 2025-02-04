@@ -1,6 +1,10 @@
 import { HistoryHandler } from "./historyhandler.js";
 
 export class Console{
+    /**
+     * 
+     * @param {HistoryHandler} history 
+     */
     constructor(history){
         this.system = document.getElementById("console_text");
         this.input = document.getElementById("console_input");
@@ -36,35 +40,65 @@ export class Console{
             console.error("Console class instance must be made by create method");
         }
 
-        this.setConsoleText(this.history_handler.what_desc());
+        this.setConsoleText(this.history_handler.getRoomDesc());
+        this.setConsoleText(this.history_handler.getRoomOptions());
 
         this.input.addEventListener("keypress", (ev)=>{
             if(ev.key == "Enter"){
-                console.log("Nuevo texto entrante")
+                this.processInput();
 
-
-                switch(this.getConsoleInput()){
-                    //using fall through for switch-case
-                    case "habitaciones":
-                    case "cuartos":
-                    case "habitacion":
-                        this.setConsoleText(
-                            this.history_handler.what_room()
-                        );
-                    break;
-                    
-                    case "opcion":
-                    case "opciones":
-                        this.setConsoleText(
-                            this.history_handler.what_options()
-                        );
-                    break;
-
-                }
             }
-
-            
         });
+    }
+
+    processInput(){
+        let user_option = this.getConsoleInput();
+        let optionIndex = parseInt( user_option ) - 1;
+
+        if(!this.history_handler.isAnOption(optionIndex)){
+            console.error(`No es una opcion valida ${optionIndex}`)
+            return false
+        }
+
+        const nextRoom = this.history_handler.options[optionIndex].siguiente_habitacion;
+
+        if(!this.history_handler.changeRoom(nextRoom)){
+            console.error("La habitacion no se pudo cambiar");
+            return false;
+        }
+
+        this.setConsoleText(this.history_handler.getRoomDesc());
+        this.setConsoleText(this.history_handler.getRoomOptions());
+
+        // if(this.history_handler.isAnOption(option)){
+        //     console.log("chequeo exitoso en consola")
+        // }
+        // switch(this.getConsoleInput()){
+        //     //using fall through for switch-case
+        //     case "habitaciones":
+        //     case "cuartos":
+        //     case "habitacion":
+        //         this.setConsoleText(
+        //             this.history_handler.roomName()
+        //         );
+        //     break;
+            
+        //     case "opcion":
+        //     case "opciones":
+        //         this.setConsoleText(
+        //             this.history_handler.roomOptions()
+        //         );
+        //     break;
+
+        // }
+
+
+
+    }
+
+    clearConsoleText(){
+        this.system.innerText = "";
+                
     }
 
     // ? Scroll top to bottom or bottom to top?
