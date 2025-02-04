@@ -67,38 +67,21 @@ export class Console{
             return false;
         }
 
+
+        this.clearConsoleText();
+        this.clearConsoleInput();
+
         this.setConsoleText(this.history_handler.getRoomDesc());
         this.setConsoleText(this.history_handler.getRoomOptions());
-
-        // if(this.history_handler.isAnOption(option)){
-        //     console.log("chequeo exitoso en consola")
-        // }
-        // switch(this.getConsoleInput()){
-        //     //using fall through for switch-case
-        //     case "habitaciones":
-        //     case "cuartos":
-        //     case "habitacion":
-        //         this.setConsoleText(
-        //             this.history_handler.roomName()
-        //         );
-        //     break;
-            
-        //     case "opcion":
-        //     case "opciones":
-        //         this.setConsoleText(
-        //             this.history_handler.roomOptions()
-        //         );
-        //     break;
-
-        // }
-
-
-
     }
 
     clearConsoleText(){
         this.system.innerText = "";
                 
+    }
+
+    clearConsoleInput(){
+        this.input.value = "";
     }
 
     // ? Scroll top to bottom or bottom to top?
