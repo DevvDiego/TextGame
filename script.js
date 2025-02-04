@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     startbtn.addEventListener("click", async ()=>{
         const music_players = await loading_screen();
         
-        music_players.menu.play();
+        music_players.ambience.play();
 
     })
 
