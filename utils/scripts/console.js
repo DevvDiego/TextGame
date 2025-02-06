@@ -40,8 +40,9 @@ export class Console{
             console.error("Console class instance must be made by create method");
         }
 
-        this.setConsoleText(this.history_handler.getRoomDesc());
+        
         this.setConsoleText(this.history_handler.getRoomOptions());
+        this.setConsoleText(this.history_handler.getRoomDesc());
 
         this.input.addEventListener("keypress", (ev)=>{
             if(ev.key == "Enter"){
@@ -71,8 +72,9 @@ export class Console{
         this.clearConsoleText();
         this.clearConsoleInput();
 
-        this.setConsoleText(this.history_handler.getRoomDesc());
+        
         this.setConsoleText(this.history_handler.getRoomOptions());
+        this.setConsoleText(this.history_handler.getRoomDesc());
     }
 
     clearConsoleText(){
